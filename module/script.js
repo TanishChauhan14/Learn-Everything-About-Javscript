@@ -92,3 +92,69 @@ function fun() {
 
 // ________________________________________________________________________________________________________________________________
 
+
+
+// Data Types in JavaScript
+// 1. Primitive Data Types :- Jihne copy krne p hame real value milta hai.(String, Number, Boolean, Null, Undefined, Symbol, BigInt)
+
+let a1 = 12;
+let b1 = a1; // Copying the value of a1 to b1
+a1 = 15; // Changing the value of a1
+console.log(b1); // Output: 12
+
+// 2. Reference Data Types :- Jihne copy krne p hame reference milta hai, jisse hame real value nahi milta.(Object, Array, Function)
+
+let arr = [1, 2, 3];
+let brr = arr; // Copying the reference of arr to brr 
+console.log(brr.pop());
+console.log(arr); // Output: [1, 2] (brr is a reference to arr, so changes in brr affect arr)
+
+// null :- Iska mtlb jaanbujh kr kuch nahi hai, iska koi value nahi hai.
+
+// undefined :- Iska mtlb ki variable ko declare to kiya hai, pr usko initialize nahi kiya hai.aur default value hoti hai.
+
+// symbol :- Yeh ek unique value hoti hai, jo ki kisi bhi object ke property ko uniquely identify karne ke liye use hoti hai.
+ let obj = {
+    name: "Tanish",
+    id:12
+ }
+ let idSymbol = Symbol("id");
+    obj[idSymbol] = 123; // Adding a unique property to the object .Abb uss obj ke andar khud ka different idSymbol property ho jayegi jiska naam id hai pr value alag hogi.
+ 
+//_____________________________________________________________________________________________________________________________________
+
+// Dynamic Typing :- Js mein static typing nahi hoti, yha pr dynamic typing hoti hai jiska matlab hai ki variable ki type run time
+// p change ho sakti hai. Matlab ek variable ko hum string se number mein change kr sakte hai.
+// Dynamic typing allows flexibility in JavaScript, but it can also lead to unexpected behavior if not managed carefully.
+
+let dynamicVar = "Hello"; // Initially a string
+dynamicVar = 42; // Now a number
+console.log(dynamicVar); // Output: 42
+
+// Type coercion :- Js mein type coercion hoti hai, jiska matlab hai ki js automatically type ko convert kr deta hai.
+let num1 = "5";
+let num2 = 10;
+let result = num1 + num2; // Type coercion happens here, num1 is converted to a number
+
+console.log(result); // Output: 510 (string concatenation)  
+
+// To avoid type coercion, we can use explicit conversion:
+
+let explicitResult = Number(num1) + num2; // Explicitly converting num1 to a number
+
+console.log(explicitResult); // Output: 15 (number addition)   
+
+console.log(num2 - num1); // Output: 5 (number subtraction, num1 is coerced to a number)   
+
+console.log(num2 * num1); // Output: 50 (number multiplication, num1 is coerced to a number)
+
+console.log(num2 / num1); // Output: 2 (number division, num1 is coerced to a number)
+
+console.log(num2 % num1); // Output: 0 (number modulus, num1 is coerced to a number)    
+
+// ________________________________________________________________________________________________________________________________
+
+// Truthy and Falsy Values in JavaScript
+
+// Falsy : - values are values that evaluate to false in a boolean context.(false, 0, "", null, undefined, NaN, document.all)
+// Truthy : - values are values that evaluate to true in a boolean context.(true, 1, "Hello", [], {}, function() {}, Infinity, -Infinity)
