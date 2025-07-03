@@ -158,3 +158,20 @@ console.log(num2 % num1); // Output: 0 (number modulus, num1 is coerced to a num
 
 // Falsy : - values are values that evaluate to false in a boolean context.(false, 0, "", null, undefined, NaN, document.all)
 // Truthy : - values are values that evaluate to true in a boolean context.(true, 1, "Hello", [], {}, function() {}, Infinity, -Infinity)
+
+
+// _________________________________________________________________________________________________________________________________
+
+// OPERATORS 
+
+// 1. Arithmetic :- + , - ,   / :-Quasant   , * ,  % :- Remainder     ,   ** :- Power like .. 2**3 = 8
+
+// 2. Comparison :- = , == , === , != :- Not Equal , !==  :- Strict Comparison , >= ,<= ,> , < 
+
+// 3. Assignment :- = , += , -= , *= , /= , %= , **=
+
+// 4. Logical :- && :- If only both are true , || :- one side true can be sufficient , ! :- Not operator
+
+// 5. unary :- typeof , + , - , ! , ++ , -- 
+
+// 6. ternary :- condition ? true : false
