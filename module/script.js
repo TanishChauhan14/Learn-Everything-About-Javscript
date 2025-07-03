@@ -175,3 +175,26 @@ console.log(num2 % num1); // Output: 0 (number modulus, num1 is coerced to a num
 // 5. unary :- typeof , + , - , ! , ++ , -- 
 
 // 6. ternary :- condition ? true : false
+
+//_______________________________________________________________________________________________________________________________
+
+// Control flow statement
+
+// if else
+// switch Statement
+// early statement
+
+// Example : - Rock, paper scissor game 
+
+function playgame(user,computer) {
+    if (user == computer) return "It's a tie" 
+
+    if (user == "rock" && computer == "scissor" ) return "user"
+    if (user == "paper" && computer == "rock" ) return "user"
+    if (user == "scissor" && computer == "paper" ) return "user"
+    
+    return "computer"
+     
+}
+
+console.log(playgame("rock" , "rock"));
