@@ -79,3 +79,15 @@ for(let i = 1 ;i <= 100;i++){
    }
 }
 // console.log(count);
+
+
+// Q- 10  Count the numbers of digits in a number.
+
+let number = 12345;
+let n = number
+let c = 0 ; 
+while(number > 0){
+   number = Math.floor(number / 10)
+   c += 1;
+}
+console.log(`There are ${c} digit in the ${n}`);
