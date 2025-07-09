@@ -173,3 +173,30 @@ let str = arr.join(', ');  // Elements ko ', ' se join karega
 console.log(str); // "apple, banana, cherry"
 
 //________________________________________________________________________________________________________________________________
+
+// Destructuring Arrays :-
+// Destructuring se array ke elements ko alag-alag variables me assign kar sakte hain.
+// Syntax :- let [var1, var2, ...] = array;
+// Kab use karte hain destructuring?
+// 1.Array ke elements ko alag variables me assign karna ho
+// 2.Readable aur concise code likhna ho
+
+// Example : 1
+let arr = [1, 2, 3,4,5];
+let [o,p ,,q] = arr; // o = 1, p = 2, q = 4 (3rd element skip ho gaya)
+console.log(o, p, q); // 1 2 4
+
+// spread operator :-Array ak reference type hota hai mtlb agar ham ak array ko dusre array m assign karte hai to dono array ak memory m assign hote hai isiliye ham isse continuous memory m save hone vaale kahte hai. But agar ham ak naya aaray chahte hai jo different memory m ho to or vo pichle vaale se koi rista na rakhe to ham spread operator use karte hai.
+// Function m isse ham rest params operater kahte hai or yha ham isse spread params kahte hai."..."
+
+// Example : 1
+let r = [1,2,3,4,5,6,7,8,9]
+let s = [...r]; // abb r ke elements s m spread ho gye means s m copy hogye gaye with apni ak alag identity le sath. so abb agar ham s m koi change karenge or r m koi change karenge to dusre m koi change nahi hoga.
+s.pop(); // s is now [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(r); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//_______________________________________________________________________________________________________________________________
+//_______________________________________________________________________________________________________________________________
+
+
+
