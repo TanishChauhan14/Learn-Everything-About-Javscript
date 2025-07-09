@@ -121,7 +121,7 @@ let k = [10, 20, 30, 40, 90];
 let l =  k.some((val) => {
     return val > 80; // Returns true if any element is greater than 80, otherwise false
 })
-console.log(l); // true
+// console.log(l); // true
 
 // every() :- Every bhi High level function hai,ye check karta hai ki array ka har element condition ko satify kr rha hai ya nhi.
 // Agar sabhi element condition ko satisfy krte hai to true return hota hai otherwise false.
@@ -133,7 +133,7 @@ let n = m.every((val) => {
     return val > 33; // Returns true if every element is greater than 33, otherwise false
 })
 
-console.log(n); // False
+// console.log(n); // False
 
 // fill() :- array ke har element ko ek hi value se bhar deta hai.ye existing array ko mutate karta hai (original array badal jata hai)
 // suntax :- array.fill(value, start, end)
@@ -148,16 +148,16 @@ console.log(n); // False
 // Example : 1
 let arr = [1, 2, 3, 4];
 arr.fill(0);  // Poore array ko 0 se bharde
-console.log(arr); // [0, 0, 0, 0]
+// console.log(arr); // [0, 0, 0, 0]
 
 // Example : 2
 let arr = [1, 2, 3, 4, 5];
 arr.fill(9, 1, 4);  // index 1 se lekar 4 se pehle tak 9 bharega
-console.log(arr); // [1, 9, 9, 9, 5]
+// console.log(arr); // [1, 9, 9, 9, 5]
 
 // Example : 3
 let arr = new Array(5).fill(1);  
-console.log(arr); // [1, 1, 1, 1, 1]
+// console.log(arr); // [1, 1, 1, 1, 1]
 
 
 // join() :- Array ke elements ko ek string me join karta hai, jisme elements ke beech me separator daal sakte hain.
@@ -170,7 +170,7 @@ console.log(arr); // [1, 1, 1, 1, 1]
 // Example : 1
 let arr = ['apple', 'banana', 'cherry'];
 let str = arr.join(', ');  // Elements ko ', ' se join karega
-console.log(str); // "apple, banana, cherry"
+// console.log(str); // "apple, banana, cherry"
 
 //________________________________________________________________________________________________________________________________
 
@@ -184,7 +184,7 @@ console.log(str); // "apple, banana, cherry"
 // Example : 1
 let arr = [1, 2, 3,4,5];
 let [o,p ,,q] = arr; // o = 1, p = 2, q = 4 (3rd element skip ho gaya)
-console.log(o, p, q); // 1 2 4
+// console.log(o, p, q); // 1 2 4
 
 // spread operator :-Array ak reference type hota hai mtlb agar ham ak array ko dusre array m assign karte hai to dono array ak memory m assign hote hai isiliye ham isse continuous memory m save hone vaale kahte hai. But agar ham ak naya aaray chahte hai jo different memory m ho to or vo pichle vaale se koi rista na rakhe to ham spread operator use karte hai.
 // Function m isse ham rest params operater kahte hai or yha ham isse spread params kahte hai."..."
@@ -193,10 +193,12 @@ console.log(o, p, q); // 1 2 4
 let r = [1,2,3,4,5,6,7,8,9]
 let s = [...r]; // abb r ke elements s m spread ho gye means s m copy hogye gaye with apni ak alag identity le sath. so abb agar ham s m koi change karenge or r m koi change karenge to dusre m koi change nahi hoga.
 s.pop(); // s is now [1, 2, 3, 4, 5, 6, 7, 8]
-console.log(r); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// console.log(r); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 //_______________________________________________________________________________________________________________________________
 //_______________________________________________________________________________________________________________________________
 
+// Questions :- 
 
-
+// 1. Create an array with three fruits  and print the second fruit .
+ 
