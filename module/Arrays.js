@@ -38,3 +38,34 @@ arr.sort(function(a,b){
 })
 
 
+// For each :- High-level function that executes a provided function once for each array element.
+
+let a = [1, 2, 3, 4, 5];
+
+a.forEach((val) => {
+    console.log(val); // Prints each element in the array
+    
+})
+
+
+// Map :- Map also executes a provided function once for each array element, Map tabhi use krna hai jab aapko ak naya array chahiye ho jo pichle wale array ke data ke basis par ho.
+
+// Map dikhte hi samjho ki ak null array banegi jiska size starting m null fir purane wale array ke size ke barabar hoga and we have to return the value for each element in the new array.
+
+// Return is compulsory in map, agar return nahi karoge to undefined return hoga.
+ 
+// Jab bhi aapko lage ki aapko ak naya array chahiye jo pichle wale array ke data ke basis par ho and usme kux value aaye gi tab aap map use karte ho.
+
+// Example : 1
+let b = [1, 2, 3, 4, 5];
+
+let c = b.map(() => {
+    return 10; // Returns a new array [10, 10, 10, 10, 10]
+})
+
+
+// Example : 2
+
+let d = c.map((val)=> {
+    return val + Math.floor(Math.random() * 10); // Returns a new array with random values added to each element of c
+})
