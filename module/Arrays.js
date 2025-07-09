@@ -32,7 +32,8 @@ let newArr = arr.slice(1,3); // newArr is now [20, 30]
 arr.reverse(); // arr is now [5, 4, 30, 20, 0]
 
 // 8. sort() - Sorts the elements of an array in place and returns the sorted array.
-arr.sort(function(a,b){
+
+arr.sort(function(a,b){ // This is only for numbers and string can be sort like this :- "string.sort()"
     return a - b; // Sorts in ascending order
     return b - a; // Sorts in descending order
 })
@@ -146,17 +147,17 @@ let n = m.every((val) => {
 // 3.Initial value bharni ho kisi size ke array me
 
 // Example : 1
-let arr = [1, 2, 3, 4];
-arr.fill(0);  // Poore array ko 0 se bharde
+ let arrr = [1, 2, 3, 4];
+arrr.fill(0);  // Poore array ko 0 se bharde
 // console.log(arr); // [0, 0, 0, 0]
 
 // Example : 2
-let arr = [1, 2, 3, 4, 5];
-arr.fill(9, 1, 4);  // index 1 se lekar 4 se pehle tak 9 bharega
+let arrr1 = [1, 2, 3, 4, 5];
+arrr1.fill(9, 1, 4);  // index 1 se lekar 4 se pehle tak 9 bharega
 // console.log(arr); // [1, 9, 9, 9, 5]
 
 // Example : 3
-let arr = new Array(5).fill(1);  
+let arrr2 = new Array(5).fill(1);  
 // console.log(arr); // [1, 1, 1, 1, 1]
 
 
@@ -168,8 +169,8 @@ let arr = new Array(5).fill(1);
 // 2.Array ko readable format me dikhana ho
 
 // Example : 1
-let arr = ['apple', 'banana', 'cherry'];
-let str = arr.join(', ');  // Elements ko ', ' se join karega
+let arrr3 = ['apple', 'banana', 'cherry'];
+let str = arrr3.join(', ');  // Elements ko ', ' se join karega
 // console.log(str); // "apple, banana, cherry"
 
 //________________________________________________________________________________________________________________________________
@@ -182,8 +183,8 @@ let str = arr.join(', ');  // Elements ko ', ' se join karega
 // 2.Readable aur concise code likhna ho
 
 // Example : 1
-let arr = [1, 2, 3,4,5];
-let [o,p ,,q] = arr; // o = 1, p = 2, q = 4 (3rd element skip ho gaya)
+let arrr4 = [1, 2, 3,4,5];
+let [o,p ,,q] = arrr4; // o = 1, p = 2, q = 4 (3rd element skip ho gaya)
 // console.log(o, p, q); // 1 2 4
 
 // spread operator :-Array ak reference type hota hai mtlb agar ham ak array ko dusre array m assign karte hai to dono array ak memory m assign hote hai isiliye ham isse continuous memory m save hone vaale kahte hai. But agar ham ak naya aaray chahte hai jo different memory m ho to or vo pichle vaale se koi rista na rakhe to ham spread operator use karte hai.
@@ -201,4 +202,81 @@ s.pop(); // s is now [1, 2, 3, 4, 5, 6, 7, 8]
 // Questions :- 
 
 // 1. Create an array with three fruits  and print the second fruit .
+ 
+let fruits = ["Apple","Cherry","Orange"]
+// console.log(fruits[1]);
+
+// 2. Add "Mango" at the end and "Pineapple" at the first.
+
+fruits.push("Mango");
+fruits.unshift("Pineapple")
+
+
+// 3. Replace the "Orange" with "Kiwi"
+
+fruits[3] = "Kiwi";
+// console.log(fruits);
+
+// 4. Add "Red" and "Blue" at first index.
+let colors = ["white","yellow"]
+
+colors.splice(1,0,"Red","Blue")
+console.log(colors);
+
+// 5. Take out the middle numbers from numbers
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let num2 = num.slice(3,6);
+// console.log(num2);
+
+// 6. Sort a array alphabetically and then reverse it.
+
+let names = ["Zannu","Tanish","Happy","Raja","Pardeep"]
+ 
+// Way : 1
+let names2 = names.sort()
+
+// console.log(names2);
+
+names2.reverse();
+
+// console.log(names2);
+
+
+// 7. Use Map to square each number.
+
+let num3 = [1,2,3,4,5]
+let num4 = num3.map((val) => {
+    return val*val ;
+})
+console.log(num4);
+
+// 8. Use filter() to keep numbers greater than 10.
+
+let num5 = [23,56,12,10.5,7]
+
+ num5 = num5.filter((val) => {
+    return val > 10;
+})
+// console.log(num5);
+
+// 9. Use Reduce() to find addition of array.
+
+let add = num4.reduce((accumulator,value) => {
+    return accumulator + value
+},0)
+console.log(add);
+
+// 10. Use find() to get first elem smaller the 10
+
+let num6 = [23,56,12,10.5,7]
+let smallerto10 = num6.find((val) => {
+    return val < 10;
+})
+console.log(smallerto10);
+
+// 11. Add "India" to first in this array using spread.
+let country = ["America","Nepal","Russia"]
+let country2 = ["India",...country]
+console.log(country2);
  
