@@ -69,7 +69,33 @@ let elements5 = document.querySelectorAll(".hey");
 //________________________________________________________________________________________________________________________________
 
 let naame = document.querySelector(".naame")
-console.dir(naame); // It returns the Nordlist we can acess it's elements as object and change them as we want to change.
+// console.dir(naame); // It returns the Nordlist we can acess it's elements as object and change them as we want to change.
 
 naame.innerText = "Tanishka";
 
+//______________________________________________________________________________________________________________________________
+
+// Attribute manipulation
+
+// 1. SetAttribute :- 
+
+let a = document.querySelector("a");
+// adding attribute value we can setattribute.
+// way-1 
+// a.href = "https://www.google.com"
+
+// way : 2 :- Here where the set attribute came in work
+
+a.setAttribute("href","https://www.google.com")
+
+// 2. GetAttribute :- It is used to get the value of any tag's attribute.
+
+let a1 = document.querySelector(".anchor")
+// console.log(a1.getAttribute("href"));
+
+
+// 3. RemoveAttribute :- It is use to remove any attribute.
+
+a1.removeAttribute("href")
+
+//________________________________________________________________________________________________________________________________
