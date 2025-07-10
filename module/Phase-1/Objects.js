@@ -116,4 +116,79 @@ let obj8 = {
 
 console.log(obj8);
 
+// Question 
 
+// 1. Create an object for a student with name, age and isEnrolled.
+
+let student = {
+    name : "aa",
+    age : 34,
+    isEnrolled : true
+}
+
+// 2. Access the value of "first-name".
+const user = {
+    "first-name":"tanish"
+}
+user["first-name"]
+
+// 3. Given a dynamic key let key = "age",how will you acess user[key]
+
+let key = "age"
+
+let obj9 ={
+    age : 20
+}
+
+obj9[key]
+
+// 4. From the object below, print the latitude 
+
+const locations = {
+    cit : "Najafgarh",
+    coordinated : {
+        lat : 23.22,
+        lang : 77.4
+    }
+}
+
+console.log(locations?.coordinated?.lat);
+
+
+// 5. Destructure the city and lat from the mocations obj above.
+
+let {cit} = locations
+let {lat} = locations.coordinated
+console.log(cit , lat);
+
+
+// 6. Destructure the key  "first-name" as a variable called first name
+
+const user1 = {
+    "first-name":"tanish"
+}
+let {"first-name" : firstname } = user1
+console.log(firstname);
+
+// 7. Use forin loop to log all the key of obj.
+
+let obj10 = {
+    course : "JS",
+    Duration : "8 hours"
+}
+
+for(const key in obj10){
+   // console.log(key);
+    
+}
+
+// 8. Use Object.entries() to print all key-value pairs as : course : js , Duration : 8 hours
+
+let obj11 = {
+    course : "JS",
+    Duration : "8 hours"
+}
+Object.entries(obj11).forEach((value) => {
+    console.log(`${value[0]} : ${value[1]}` );
+    
+})
