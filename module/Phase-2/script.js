@@ -99,3 +99,41 @@ let a1 = document.querySelector(".anchor")
 a1.removeAttribute("href")
 
 //________________________________________________________________________________________________________________________________
+
+// Dynamic DOM Manipulation.
+
+// create element 
+// Append/prepend :- element ko HTML m daalo jaha chahiye body ke jsut baad append saare element k last m prepend.
+
+let h4 = document.createElement("h4");
+h4.textContent = "Hey Bro what's up!";
+document.body.append(h4); // append
+document.body.prepend(h4); // Prepend
+
+// Removing Child
+
+element1.remove();
+
+//________________________________________________________________________________________________________________________
+
+// Manipulating CSS using js.
+
+h4.style.color ="Red";
+h4.style.backgroundColor="Brown"
+h4.style.textTransform="Capitalize"
+
+// Add class :-  It can use to Handle css properties.just make a css class add using js.
+//way : 1
+h4.classList.add(".hh")
+// way : 2
+h4.classList.value = "hh"
+
+// To remove class
+h4.classList.remove("hh")
+
+
+// Toggle : - it is used agar class lgi hai to hta dega or nhi hogi to lga dega .
+h4.classList.toggle("hh")
+
+console.log(h4);
+
