@@ -137,3 +137,50 @@ h4.classList.toggle("hh")
 
 console.log(h4);
 
+// Questions :- 
+
+// 1. Select a paragraph and replace its content with :- <b>Updated</b> by Javascript
+
+let paragraph = document.querySelector("p");
+
+paragraph.innerHTML="<b>Updated</b> by Javascript";
+
+// 2. How to get src from an image.
+
+let image = document.querySelector("img")
+console.log(image.getAttribute("src"));
+
+
+// 3. Select a link and update it's href.
+
+let anchor = document.querySelector(".anchor");
+anchor.setAttribute("href","https://github.com/TanishChauhan14/Learn-Everything-About-Javscript")
+
+// 4. Create a new image element with a placeholder source add it top of the div.
+
+let div1 = document.querySelector(".img")
+
+let img = document.createElement("img");
+img.setAttribute("alt","source");
+// img.setAttribute("",);
+div1.append(img)
+
+// 5. Select the first item from list and remove it.
+
+// document.querySelector("ul").removeChild(document.querySelector("li"));
+
+
+// 6. How to change background color of an element
+
+// document.querySelector("ul").style.backgroundColor = "Brown"
+
+// 7. Highlight every even item from list.
+
+let li = document.querySelectorAll("ul li:nth-child(2n)")
+console.log(li);
+
+li.forEach((val) => {
+    val.style.backgroundColor = "blue"
+})
+
+
