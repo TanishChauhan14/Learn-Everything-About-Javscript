@@ -86,3 +86,29 @@ inpfile.addEventListener("change",(dets)=>{
     inpbtn.textContent =   file.name; 
     }
 })
+
+// Example :- Creating a card after just filling a form.
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit",(e) => {
+    e.preventDefault();
+    let data = e.target;
+    let card = document.querySelector(".Card");
+    card.style.display = "block";
+    
+    let img = document.querySelector(".cardimg");
+    let name = document.querySelector(".cardname");
+    let age = document.querySelector(".cardage");
+    let tech = document.querySelector(".cardtech");
+    let desp = document.querySelector(".carddep");
+
+    img.setAttribute("src",`${data[0].value}`)
+    name.textContent = data[1].value;
+    age.textContent = data[2].value;
+    tech.textContent = data[3].value;
+    desp.textContent = data[4].value;
+
+// Add card everytime just use inner HTML in this write the whole html in this . 
+})
+

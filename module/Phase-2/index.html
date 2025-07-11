@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
-</head>
-<body>
-
+    
     <style>
         body {
             background-color: rgb(49, 49, 49);
@@ -26,7 +25,38 @@
         .Upload:hover{
             background-color: rgb(0, 81, 0);
         }
+
+        form{
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 50%;
+
+        }
+
+        .form-input{
+            display: block;
+            padding: 10px;
+            background-color: rgb(52, 52, 52);
+             border-radius: 10px;
+             border: none;
+        }
+        .sub-btn{
+            display: block;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(0, 73, 0);
+            font-size: larger;
+            font-weight: 600;
+        }
+        .Card{
+             display: none; 
+        }
     </style>
+</head>
+<body>
+
 
 
 
@@ -48,6 +78,38 @@
     <input type="file" id="in-file" />
 
     <button class="Upload">Upload file</button>
+
+    <form>
+        <input type="text" placeholder="Profile-Pic" class="form-input">
+        <input type="text" placeholder="Name" class="form-input">
+        <input type="text" placeholder="Age" class="form-input">
+        <input type="text" placeholder="Technology" class="form-input">
+        <input type="text" placeholder="Decription" class="form-input">
+        <button class="sub-btn" type="submit">Submit</button>
+    </form>
+    <!-- Card -->
+
+    <div class="Card">
+    <div class="max-w-xs p-6 rounded-md shadow-md bg-grey">
+    <img
+  src=""
+  alt="Laptop"
+  class="cardimg object-cover object-center w-full rounded-md h-72 bg-gray-500"
+/>
+
+    <div class="mt-6 mb-2">
+      <span class="cardname block text-sm font-medium font-mono tracking-widest uppercase text-indigo-400">
+        Title
+      </span>
+      <h2 class="cardage text-xl font-semibold tracking-wide">Lorem ipsum dolor</h2>
+      <h2 class="cardtech text-xl font-semibold tracking-wide">Lorem ipsum dolor</h2>
+    </div>
+    <p class="carddep text-gray-300">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum soluta amet
+    </p>
+</div>
+</div>
+
     
     <script src="EventsandEventhandling.js" > </script>
 </body>
