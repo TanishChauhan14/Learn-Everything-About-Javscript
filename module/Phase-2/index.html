@@ -7,6 +7,30 @@
 </head>
 <body>
 
+    <style>
+        body {
+            background-color: rgb(49, 49, 49);
+        }
+
+        #in-file{
+            display: none;
+        }
+        .Upload{
+            background-color: green;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+        .Upload:hover{
+            background-color: rgb(0, 81, 0);
+        }
+    </style>
+
+
+
+
     <h1 class="h1">Event Listener</h1>
     <input type="text" placeholder="write" />
 
@@ -21,6 +45,9 @@
 
     <h1 class="keypress">1</h1>
     
+    <input type="file" id="in-file" />
+
+    <button class="Upload">Upload file</button>
     
     <script src="EventsandEventhandling.js" > </script>
 </body>

@@ -69,3 +69,20 @@ window.addEventListener("keydown",(dets) => {
     }
     
 })
+
+// Example :- Change , click , click method().Creating a custom upload button.
+
+
+let inpfile = document.querySelector("#in-file");
+let inpbtn =  document.querySelector(".Upload");
+
+inpbtn.addEventListener("click",() => {
+    inpfile.click();
+})
+
+inpfile.addEventListener("change",(dets)=>{
+    let file = dets.target.files[0] 
+    if(file){
+    inpbtn.textContent =   file.name; 
+    }
+})
