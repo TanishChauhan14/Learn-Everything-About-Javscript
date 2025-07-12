@@ -133,3 +133,16 @@ window.addEventListener("mousemove",(dets) => {
     
 })
 
+// _______________________________________________________________________________________________________________________________
+
+// Event Object : target :- It is the one which the event happen like :- click,dblclick 
+// type:- It tells which event had been done the element beacuse there can be many event on a single element ,
+// preventDefault :- It prevent the nature of the form to referesh the page .
+
+//_______________________________________________________________________________________________________________________________
+
+// event bubbling : Jispe event aayega ya hoyega agar uske pass listener nhi hai to vo uske parent p move hojaaye ga fir vha listener dhudega wha bhi nhi mila tovo aone parent p agar last nhi hua kissi k passto kux nhi hoga .
+
+
+// Ex :- 
+
