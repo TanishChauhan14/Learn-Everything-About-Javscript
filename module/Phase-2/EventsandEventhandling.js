@@ -126,12 +126,12 @@ mouse_div.addEventListener("mouseout",() => {
 
 // Example :- mousemove :-It return the mouse event or can be call even if you move the mouse.clientx and clienty shows the arraow axis on screen.
 
-window.addEventListener("mousemove",(dets) => {
+// window.addEventListener("mousemove",(dets) => {
     
-    mouse_div.style.top = dets.clientY + "px"
-    mouse_div.style.left = dets.clientX + "px"
+//     mouse_div.style.top = dets.clientY + "px"
+//     mouse_div.style.left = dets.clientX + "px"
     
-})
+// })
 
 // _______________________________________________________________________________________________________________________________
 
@@ -144,5 +144,25 @@ window.addEventListener("mousemove",(dets) => {
 // event bubbling : Jispe event aayega ya hoyega agar uske pass listener nhi hai to vo uske parent p move hojaaye ga fir vha listener dhudega wha bhi nhi mila tovo aone parent p agar last nhi hua kissi k passto kux nhi hoga .
 
 
-// Ex :- 
+// Ex :- In this you can see how if we click child it will also target the parent event listener and we only click parent it call it's parent if added.To stop means if we click child it don't call parent we can use ""stoppropogation()"" that's present in dets. 
+
+let bubblediv = document.querySelector(".Pevtbubble") // That's how it work
+
+bubblediv.addEventListener("click",()=>{ // We click this only write parent 
+    console.log("Parent");
+    
+})
+
+let bubblebtn = document.querySelector(".evtbubble")
+
+bubblebtn.addEventListener("click",(dets)=>{ // We click this also call Parent with child 
+//    dets.stopPropagation(); // This don't let go to it's parent's listener.
+    console.log("child");
+    
+})
+
+
+//_______________________________________________________________________________________________________________________________
+
+
 
