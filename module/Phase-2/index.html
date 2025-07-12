@@ -9,6 +9,8 @@
     <style>
         body {
             background-color: rgb(49, 49, 49);
+            position: relative;
+            overflow: hidden;
         }
 
         #in-file{
@@ -52,6 +54,13 @@
         }
         .Card{
              display: none; 
+        }
+        .mouse-effect{
+            position: absolute;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
         }
     </style>
 </head>
@@ -110,7 +119,22 @@
 </div>
 </div>
 
+<div class="mouse-effect">
+    Mouse Effect
+</div>
     
     <script src="EventsandEventhandling.js" > </script>
 </body>
 </html>
+
+// _______________________________________________________________________________________________________________________________
+
+// Event Object : target :- It is the one which the event happen like :- click,dblclick 
+type:- It tells which event had been done the element beacuse there can be many event on a single element ,
+preventDefault :- It prevent the nature of the form to referesh the page .
+
+//_______________________________________________________________________________________________________________________________
+
+// event bubbling : 
+
+

@@ -112,3 +112,24 @@ form.addEventListener("submit",(e) => {
 // Add card everytime just use inner HTML in this write the whole html in this . 
 })
 
+// Example  :-mouseover :- Jab ham kissi element p enter/hover ho . mouseout :- jab ham kissi element se mouse htaye 
+
+let mouse_div = document.querySelector(".mouse-effect");
+
+mouse_div.addEventListener("mouseover",() => {
+    mouse_div.style.backgroundColor = "red";
+})
+
+mouse_div.addEventListener("mouseout",() => {
+    mouse_div.style.backgroundColor = "aqua";
+})
+
+// Example :- mousemove :-It return the mouse event or can be call even if you move the mouse.clientx and clienty shows the arraow axis on screen.
+
+window.addEventListener("mousemove",(dets) => {
+    
+    mouse_div.style.top = dets.clientY + "px"
+    mouse_div.style.left = dets.clientX + "px"
+    
+})
+
