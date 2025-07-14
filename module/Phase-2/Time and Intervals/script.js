@@ -59,3 +59,29 @@
 //________________________________________________________________________________________________________________________________
 //________________________________________________________________________________________________________________________________
 
+let downloadBtn = document.querySelector("#downloadBtn");
+
+let progressText = document.querySelector("#progressText")
+
+let progressBar =  document.querySelector(".progress-bar")
+
+
+
+downloadBtn.addEventListener("click", () => {
+
+    let count = 0;
+    progressBar.style.width = "0%";
+    progressText.textContent = "0%";
+
+    setInterval(() => {
+        if(count <= 99){
+            count++;
+            progressBar.style.width = `${count}%`;
+            progressText.textContent = `${count}%`;
+        }else{
+         clearInterval(interval);
+          
+        }
+    }, 1000 / 100)
+
+})

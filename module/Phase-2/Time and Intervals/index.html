@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Simulation</title>
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background: #3e3e3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.progress-container {
+  background: #ddd;
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+#progressText {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+#statusMessage {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+</style>
 </head>
 <body>
-    Helloo
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Download Simulation</h1>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p id="progressText">0%</p>
+    <button id="downloadBtn">Start Download</button>
+    <!-- <div id="statusMessage" class="hidden">Download complete!</div> -->
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
