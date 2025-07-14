@@ -1,4 +1,4 @@
-let form = document.querySelector(".form1")
+// let form = document.querySelector(".form1")
 
 // let  inpname = document.querySelector(".name")
 
@@ -14,6 +14,9 @@ let form = document.querySelector(".form1")
 //             errname.style.display = "none"   
 //         }
 // })
+
+//_______________________________________________________________________________________________________________________________
+
 
 // // Using regex
 
@@ -43,3 +46,46 @@ let form = document.querySelector(".form1")
 //   console.log(emailRegex.test("t@g.com"));
 
 // })
+
+
+// ___________________________________________________________________________________________________________________________
+
+let validatorForm = document.querySelector("#validatorForm")
+
+let email = document.querySelector("#email")
+let pass = document.querySelector("#password")
+let passwordError = document.querySelector("#passwordError");
+let emailError = document.querySelector("#emailError");
+
+
+
+
+validatorForm.addEventListener("submit",(dets) =>{
+
+    dets.preventDefault();
+
+    passwordError.textContent = "";
+    emailError.textContent = "";
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+
+    if(!emailRegex.test(email.value)){
+
+        emailError.style.display = "initial"
+        emailError.textContent = "Email Is Invalid !"
+    }
+
+    if(!passwordRegex.test(pass.value)){
+ 
+        passwordError.style.display = "initial"
+        passwordError.textContent = "Password Is Invalid !"        
+    }
+
+    if (passwordRegex.test(pass.value) && emailRegex.test(email.value) ) {
+
+        let formMessage = document.querySelector("#formMessage")
+        formMessage.style.display = "initial";
+    }
+
+})

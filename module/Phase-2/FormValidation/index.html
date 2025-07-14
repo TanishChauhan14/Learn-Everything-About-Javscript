@@ -13,6 +13,98 @@
         display: none;
     } -->
 
+
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #343434;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s border;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.form-message {
+  margin-top: 15px;
+  color : green;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+    </style>
 </head>
 <body>
     <!--     
@@ -37,5 +129,28 @@
         <br><br>
         <button type="submit">Submit</button>
     </form> -->  
+     <div class="container">
+    <form id="validatorForm">
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email" required />
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <button type="submit">Validate</button>
+      <div id="formMessage" class="form-message">Validated Successfully!</div>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
