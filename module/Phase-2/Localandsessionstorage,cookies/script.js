@@ -47,6 +47,90 @@
 // // save cokkie
 
 // document.cookie = "email = tanish@gmail.com"
+
+
+//________________________________________________________________________________________________________________________________
+//________________________________________________________________________________________________________________________________
+
+
+// Questions : Toggle Button theme.
+
+// On the OS(System) Bases.
+ 
+
+
+function theme() {
+    let body = document.querySelector("body");
+
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+        let togglebtn = document.querySelector("#themeToggle")
+        document.body.classList.add("dark-theme");
+        document.body.classList.remove("light-theme");
+         togglebtn.textContent= "☀️ Click to Light Mode" ;
+    }else{
+        let togglebtn = document.querySelector("#themeToggle")
+        document.body.classList.add("light-theme");
+        document.body.classList.remove("dark-theme"); 
+        togglebtn.textContent = "🌙 Click to Dark Mode";
+      
+}
+}
+
+theme();
+
+
+
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change",() =>{
+    theme();
+})
+
+
+// Based on localstorage.
+
+function applythemelocal(theme) {
+    if (!theme) return; // If null, exit
+
+    // Remove both theme classes first
+    document.body.classList.remove("light-theme", "dark-theme");
+
+    // Then apply the one from localStorage
+    document.body.classList.add(theme);
+    let togglebtn = document.querySelector("#themeToggle")
+    theme == "dark-theme" ? togglebtn.textContent = "☀️ Click to Light Mode" : togglebtn.textContent ="🌙 Click to Dark Mode" ;
+    
+    
+}
+
+applythemelocal(localStorage.getItem("theme"));
+
+
+
+// Now Button se change krna ho to.
+
+let togglebtn = document.querySelector("#themeToggle")
+
+togglebtn.addEventListener("click",() => {
+    if(document.body.classList.contains("dark-theme")){
+
+        let togglebtn = document.querySelector("#themeToggle")
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+        togglebtn.textContent = "🌙 Click to Dark Mode"; 
+        localStorage.setItem("theme","light-theme")
+
+    }else{
+        let togglebtn = document.querySelector("#themeToggle")
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme"); 
+        togglebtn.textContent= "☀️ Click to Light Mode" ;
+        localStorage.setItem("theme","dark-theme")     
+}
+})
+
+
+
+
  
 
 
