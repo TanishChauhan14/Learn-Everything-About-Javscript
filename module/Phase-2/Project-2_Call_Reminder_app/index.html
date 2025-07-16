@@ -83,6 +83,10 @@ body {
   height: 200px;
 }
 
+.stack .card {
+  transition: transform 0.3s ease;
+}
+
 .card {
   position: absolute;
   top: 0;
@@ -223,6 +227,7 @@ input[type="text"] {
   font-weight: 500;
   border-radius: 100px;
   text-transform: capitalize;
+  
 }
    </style>
 </head>
@@ -232,16 +237,16 @@ input[type="text"] {
         <h2>New Call</h2>
         <form>
             <label>Image URL</label>
-            <input required type="text" placeholder="https://example.com/photo.jpg" />
+            <input required  type="text" class="image" placeholder="https://example.com/photo.jpg" />
 
             <label>Full Name</label>
-            <input required type="text" placeholder="Enter full name" />
+            <input required type="text" class="name" placeholder="Enter full name" />
 
             <label>Home Town</label>
-            <input required type="text" placeholder="Enter home town" />
+            <input required type="text" class="home-town" placeholder="Enter home town" />
 
             <label>Purpose</label>
-            <input required type="text" placeholder="e.g., Quick appointment note" />
+            <input required type="text" class="Purpose" placeholder="e.g., Quick appointment note" />
 
             <label>Category</label>
             <label class="tag-checkbox">
