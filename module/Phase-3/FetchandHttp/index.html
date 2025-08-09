@@ -1,12 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful Dark Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-    <script src="script.js"></script>
+<body class="min-h-screen bg-gradient-to-b from-[#071022] via-[#061527] to-[#041219] p-6 text-white">
+
+  Cards container
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- Card -->
+    <div class="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md shadow-xl p-6 flex flex-col items-center text-center transition hover:scale-[1.02] hover:shadow-2xl duration-300">
+      
+      <!-- Glow effect -->
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-tr from-teal-500/10 via-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+      <!-- Image -->
+      <!-- <img src="IMAGE_URL" alt="NAME" class="relative z-10 w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg transition duration-300 group-hover:scale-105" /> -->
+      
+      <!-- Name -->
+      <h2 class="relative z-10 mt-4 text-lg font-semibold tracking-wide text-white group-hover:text-teal-300 transition">
+        NAME
+      </h2>
+      
+      <!-- Age -->
+      <p class="relative z-10 text-slate-300 text-sm mt-1">Age: AGE</p>
+      
+      <!-- Gender -->
+      <p class="relative z-10 text-slate-300 text-sm">Gender: GENDER</p>
+
+      <!-- Decorative line -->
+      <div class="relative z-10 mt-4 w-12 h-0.5 bg-gradient-to-r from-teal-400 to-purple-500 rounded-full"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
